@@ -1,5 +1,5 @@
 {
-  "name": "ngbat-robin-ui",
+  "name": "@ngbat/robin-ui",
   "version": "0.1.0",
   "scripts": {
     "build": "gulp build",

@@ -1,11 +1,11 @@
-# ngbat-robin-ui
+# @ngbat/robin-ui
 
 ## Installation
 
 To install this library, run:
 
 ```bash
-$ npm install ngbat-robin-ui --save
+$ npm install @ngbat/robin-ui --save
 ```
 
 ## Consuming your library
@@ -13,7 +13,7 @@ $ npm install ngbat-robin-ui --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install ngbat-robin-ui
+$ npm install @ngbat/robin-ui
 ```
 
 and then from your Angular `AppModule`:
@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'ngbat-robin-ui';
+import { SampleModule } from '@ngbat/robin-ui';
 
 @NgModule({
   declarations: [
