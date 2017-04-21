@@ -23,8 +23,8 @@
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "ngbat-robin-ui.js",
-    "flatModuleId": "ngbat-robin-ui"
+    "flatModuleOutFile": "robin-ui.js",
+    "flatModuleId": "robin-ui"
   },
   "files": [
     "./index.ts"
