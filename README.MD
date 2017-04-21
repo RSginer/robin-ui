@@ -1,4 +1,10 @@
-# @ngbat/robin-ui
+# RobinUI
+<div align="center">
+  <img width="200px" src="https://raw.githubusercontent.com/ngBat/graphic-designs/master/robin-ui/logo/robin-ui.png">
+  <br/>
+RobinUI is a library with rich UI Angular components to make the frontend developers life more easy :D  
+</div>
+
 
 ## Installation
 
@@ -8,12 +14,12 @@ To install this library, run:
 $ npm install @ngbat/robin-ui --save
 ```
 
-## Consuming your library
+## Getting started
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
+Install the package
 
 ```bash
-$ npm install @ngbat/robin-ui
+$ npm install --save @ngbat/robin-ui 
 ```
 
 and then from your Angular `AppModule`:
@@ -24,8 +30,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from '@ngbat/robin-ui';
+// Import RobinUI
+import { RobinUIModule } from '@ngbat/robin-ui';
 
 @NgModule({
   declarations: [
@@ -33,9 +39,7 @@ import { SampleModule } from '@ngbat/robin-ui';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
+    RobinUIModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,14 +47,14 @@ import { SampleModule } from '@ngbat/robin-ui';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once RobinUI is imported, you can use its components, directives and pipes in your Angular application:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
+<!-- You can now use RobinUI components in app.component.html -->
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
+<rb-sampleComponent></rb-sampleComponent>
 ```
 
 ## Development
@@ -67,6 +71,21 @@ To lint all `*.ts` files:
 $ npm run lint
 ```
 
+To link npm package 
+
+```bash
+npm run build
+cd dist
+npm link
+```
+
+and go to the project do you want to use
+
+```bash
+npm link @ngbat/robin-ui
+npm i @ngbat/robin-ui
+```
+
 ## License
 
-MIT © [Rubén Soler](mailto:r.solerginer@gmail.com)
+MIT © | Support: [Rubén Soler](mailto:r.solerginer@gmail.com)
