@@ -12,7 +12,7 @@ const srcFolder = path.join(rootFolder, 'src');
 const tmpFolder = path.join(rootFolder, '.tmp');
 const buildFolder = path.join(rootFolder, 'build');
 const distFolder = path.join(rootFolder, 'dist');
-
+const stylesFolder = path.join(rootFolder, 'sass');
 /**
  * 1. Delete /dist folder
  */
@@ -87,7 +87,16 @@ gulp.task('copy:build', function () {
 });
 
 /**
- * 7. Copy package.json from /src to /dist
+ * 7. Copy the sass into dist/sass
+ */
+gulp.task('copy:styles', function () {
+    return gulp.src([`${stylesFolder}/**/*`])
+        .pipe(gulp.dest(`${distFolder}/sass`));
+});
+
+
+/**
+ * 8. Copy package.json from /src to /dist
  */
 gulp.task('copy:manifest', function () {
   return gulp.src([`${srcFolder}/package.json`])
@@ -95,14 +104,14 @@ gulp.task('copy:manifest', function () {
 });
 
 /**
- * 8. Delete /.tmp folder
+ * 9. Delete /.tmp folder
  */
 gulp.task('clean:tmp', function () {
   return deleteFolders([tmpFolder]);
 });
 
 /**
- * 9. Delete /build folder
+ * 10. Delete /build folder
  */
 gulp.task('clean:build', function () {
   return deleteFolders([buildFolder]);
@@ -116,6 +125,7 @@ gulp.task('compile', function () {
     'ngc',
     'rollup',
     'copy:build',
+    'copy:styles',
     'copy:manifest',
     'clean:build',
     'clean:tmp',
