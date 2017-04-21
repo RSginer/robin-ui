@@ -54,7 +54,7 @@ Once RobinUI is imported, you can use its components, directives and pipes in yo
 <h1>
   {{title}}
 </h1>
-<rb-sampleComponent></rb-sampleComponent>
+<rb-sample-component></rb-sample-component>
 ```
 
 ## Development
