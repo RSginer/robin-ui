@@ -5,6 +5,9 @@
 RobinUI is a library with rich UI Angular components to make the frontend developers life more easy :D  
 </div>
 
+## API Docs
+
+<a href="https://ngbat.github.io/robin-ui/docs/">https://ngbat.github.io/robin-ui/docs/</a>
 
 ## Installation
 
