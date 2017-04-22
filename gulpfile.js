@@ -129,7 +129,10 @@ gulp.task("typedoc", function() {
             out: "docs/",
             includeDeclarations: true,
             experimentalDecorators: true,
-            name: "My project title"
+            excludeExternals:true,
+            name: "RobinUI",
+            hideGenerator: true,
+            readme: "./README.md"
         }))
     ;
 });
