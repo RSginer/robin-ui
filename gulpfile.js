@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   del = require('del'),
   runSequence = require('run-sequence'),
   inlineResources = require('./tools/gulp/inline-resources');
-
+  var typedoc = require("gulp-typedoc");
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src');
 const tmpFolder = path.join(rootFolder, '.tmp');
@@ -117,6 +117,23 @@ gulp.task('clean:build', function () {
   return deleteFolders([buildFolder]);
 });
 
+/**
+ * Generate docs
+ */
+gulp.task("typedoc", function() {
+    return gulp
+        .src(["src/**/*.ts"])
+        .pipe(typedoc({
+            module: "commonjs",
+            target: "es6",
+            out: "docs/",
+            includeDeclarations: true,
+            experimentalDecorators: true,
+            name: "My project title"
+        }))
+    ;
+});
+
 gulp.task('compile', function () {
   runSequence(
     'clean:dist',
@@ -129,6 +146,7 @@ gulp.task('compile', function () {
     'copy:manifest',
     'clean:build',
     'clean:tmp',
+    'typedoc',
     function (err) {
       if (err) {
         console.log('ERROR:', err.message);
