@@ -1,5 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
-
+/**
+ * Sample directive
+ */
 @Directive({
   selector: '[rbSampleDirective]'
 })

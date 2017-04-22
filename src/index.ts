@@ -9,7 +9,9 @@ export * from './rb-sample.component';
 export * from './rb-sample.directive';
 export * from './rb-sample.pipe';
 export * from './rb-sample.service';
-
+/**
+ * The main module
+ */
 @NgModule({
   imports: [
     CommonModule
