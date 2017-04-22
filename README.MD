@@ -39,7 +39,7 @@ import { RobinUIModule } from '@ngbat/robin-ui';
   ],
   imports: [
     BrowserModule,
-    RobinUIModule
+    RobinUIModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
